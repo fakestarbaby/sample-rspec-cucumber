@@ -11,10 +11,22 @@ group :assets do
 end
 
 group :development do
+  gem 'growl'
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
+  gem 'guard-spork'
   gem 'heroku'
+  gem 'rb-fsevent', :require => false
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'spork', '~> 0.9.0.rc'
 end
 
 group :production do
   gem 'pg'
 end
+
+gem "rspec-rails", :group => [ :development, :test ]
