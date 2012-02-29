@@ -22,6 +22,8 @@ group :development do
 end
 
 group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'spork', '~> 0.9.0.rc'
 end
 
